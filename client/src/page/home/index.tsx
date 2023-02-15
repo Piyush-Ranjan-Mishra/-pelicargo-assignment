@@ -1,3 +1,4 @@
+import { usePagination } from "@ajna/pagination";
 import { Box, Spacer } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import callApi from "../../api";
@@ -9,24 +10,32 @@ import Locale from "../../utils/locale";
 
 const Home = () => {
   const [data, setData] = useState<any>([]);
-  const [page, setPage] = useState<number>(1);
   const [query, setQuery] = useState<string | null>(null);
-
+  const { currentPage, setCurrentPage, pagesCount, pages } = usePagination({
+    pagesCount: parseInt(process.env.REACT_APP_PAGES_COUNT!),
+    initialState: { currentPage: 1 },
+  });
   useEffect(() => {
-    setData(callApi(page, query));
-  }, [page, query]);
+    setData(callApi(currentPage, query));
+  }, [currentPage, query]);
   return (
     <Box display="flex">
       <Box display={["none", "flex"]}>
         <LeftDrawer selected={Locale.menu.firstHalf[0]} />
       </Box>
-      <Spacer className="center">
+      <Spacer className="center-container">
         <Box maxW={1280}>
           <SearchBox setQuery={setQuery} />
-          <CardLayout {...data} onPageChange={setPage} />
+          <CardLayout
+            {...data}
+            currentPage={currentPage}
+            onPageChange={setCurrentPage}
+            pagesCount={pagesCount}
+            pages={pages}
+          />
         </Box>
       </Spacer>
-      <Box display={["none", "flex"]} pt={30}>
+      <Box className="right-container" display={["none", "flex"]} pt={30}>
         <AvatarComponent />
       </Box>
     </Box>

@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.left {
+.left-container {
   display: flex;
   padding-top: 30px;
   min-width: 250px !important;
@@ -20,9 +20,10 @@ code {
   flex-direction: column;
   padding: 20px 0;
   border-right: 1px #c9c9c9 solid;
+  height: 100vh;
 }
 
-.left .menu-items {
+.left-container .menu-items {
   display: flex;
   align-items: center;
   padding: 5px 10px;
@@ -30,7 +31,7 @@ code {
   border-radius: 4px;
 }
 
-.left .menu-items-bold {
+.left-container .menu-items-bold {
   display: flex;
   align-items: center;
   padding: 5px 10px;
@@ -39,24 +40,42 @@ code {
   font-weight: 600;
 }
 
-.left .menu-items svg {
+.left-container .menu-items svg {
   margin-right: 20px;
 }
-.left .menu-items-bold svg {
+.left-container .menu-items-bold svg {
   margin-right: 20px;
 }
 
-.center {
+.left-container .title {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
+  font-weight: bold;
+  color: gray;
+}
+
+.center-container {
   padding-top: 30px;
-  max-width: 740px;
   margin: 0 auto;
+  height: 100vh;
+  overflow: auto;
+  justify-content: center;
+  display: flex;
 }
-
-
+.center-container::-webkit-scrollbar {
+  display: none;
+}
 
 .right button {
   margin-right: 8px;
   margin: 4px;
+}
+.right-container {
+  width: 50px;
+  padding-right: 10px;
+  margin: 0 10px 0 0 !important;
 }
 
 .searchbox-wrapper {
@@ -69,18 +88,19 @@ code {
 .searchbox-wrapper input {
   border-radius: 4px;
   text-align: center;
- 
+  margin: 0 10px;
 }
 
 .searchbox-wrapper input:focus-visible {
   outline: none !important;
   box-shadow: none !important;
 }
+
 .searchbox-left-icon {
   display: flex;
   padding: 4px 8px;
   justify-content: center;
-  border-radius: 4px;
+  border-radius: 4px !important;
 }
 .searchbox-right-icon {
   display: flex;
@@ -116,4 +136,9 @@ code {
 .card .card-description {
   margin-left: 8px;
   border-radius: 4px;
+}
+
+.card .card-image-icon {
+  margin-top: -28px;
+  margin-left: 5px;
 }

@@ -1,4 +1,8 @@
 import { Box, Image } from "@chakra-ui/react";
+import LanguageIcon from "@mui/icons-material/Language";
+import WebAssetIcon from "@mui/icons-material/WebAsset";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+
 export type CardProps = {
   id: string;
   title: string;
@@ -8,10 +12,18 @@ export type CardProps = {
   onClick: (url: string | null) => void;
 };
 
+const icons = [<LanguageIcon />, <WebAssetIcon />, <DashboardIcon />];
+
 const Card = ({ title, description, imageUrl, icon, onClick }: CardProps) => {
   return (
-    <Box maxW="sm" className="card" onClick={() => onClick(imageUrl)}>
-      <Image src={imageUrl} alt={title} width="sm" height={280} />
+    <Box
+      maxW="sm"
+      className="card"
+      onClick={() => onClick(imageUrl)}
+      border="none"
+    >
+      <Image src={imageUrl} alt={title} width="sm" height={150} />
+      <Box className="card-image-icon">{icons[0]}</Box>
       <Box
         className="card-title"
         fontWeight="semibold"

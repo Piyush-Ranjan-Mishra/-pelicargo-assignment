@@ -21,11 +21,7 @@ class Server {
             const app = express_1.default();
             app.use(express_1.default.json());
             app.use(express_1.default.urlencoded({ extended: true }));
-            app.use('/api/v1', baseRouter_1.default.routes); //setting up base route
-            // define a route handler for the default home page
-            app.get("/", (req, res) => {
-                res.send("Welcome to express-create application! ");
-            });
+            app.use("/api/v1", baseRouter_1.default.routes); //setting up base route
             app.use(cors_1.default());
             return app;
         });

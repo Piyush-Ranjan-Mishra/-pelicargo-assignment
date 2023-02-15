@@ -23,16 +23,18 @@ const SearchBox = ({ setQuery }: SearchBoxProps) => {
   }, 1000);
   const bg = useColorModeValue("#d9d9d9", "gray.700");
   const iconBG = useColorModeValue("white", "gray.900");
+
   return (
     <Box display={"flex"} justifyContent="center">
       <InputGroup
         className="searchbox-wrapper"
         bg={bg}
-        width={[300, 740]}
-        mx={[2, 0]}
+        width={"100%"}
+        m={[2, 0]}
       >
         <InputLeftAddon
           bg={iconBG}
+          borderRadius={4}
           px={0}
           children={
             <Box className="searchbox-left-icon" bg={iconBG}>
@@ -47,13 +49,14 @@ const SearchBox = ({ setQuery }: SearchBoxProps) => {
           outline="none"
           border="none"
           boxShadow={"none"}
-          placeholder={Locale.searchBox.search}
+          placeholder={Locale.searchBox.placeholder}
           onChange={handleChange}
           bg={bg}
           flex={1}
         />
         <InputRightAddon
           bg={iconBG}
+          borderRadius={4}
           px={0}
           display={["none", "flex"]}
           children={

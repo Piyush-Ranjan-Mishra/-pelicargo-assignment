@@ -1,4 +1,4 @@
-import { Box, Flex, Spacer, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 import { useState } from "react";
 import Locale from "../../utils/locale";
 import MenuItem from "../card/menuItem";
@@ -19,7 +19,7 @@ const LeftDrawer = ({ selected }: LeftDrawerProps) => {
   const bg = useColorModeValue("#f0eeee", "default");
 
   return (
-    <Flex className="left" gap="2" bg={bg}>
+    <Flex className="left-container" gap="2" bg={bg}>
       <Box>
         {Locale.menu.firstHalf.map((el: string) => (
           <MenuItem
@@ -47,10 +47,7 @@ const LeftDrawer = ({ selected }: LeftDrawerProps) => {
           ))}
         </Box>
         <Box
-          display="flex"
-          justifyContent="space-around"
-          mt="1"
-          fontWeight="semibold"
+          className="title"
           as="h4"
           lineHeight="tight"
           noOfLines={1}

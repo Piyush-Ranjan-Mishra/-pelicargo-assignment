@@ -7,7 +7,6 @@ import {
   DrawerBody,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
   Box,
 } from "@chakra-ui/react";
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
@@ -22,6 +21,7 @@ const AvatarComponent = () => {
     <Stack justify={"start"} ml={1} mr={[2, 10]} direction={["row", "column"]}>
       <Avatar
         onClick={() => setIsOpen(true)}
+        mr={1}
         name="Piyush Mishra"
         src="https://bit.ly/mishhy"
       />

@@ -20,7 +20,7 @@ class CardService {
                 const query = req === null || req === void 0 ? void 0 : req.query;
                 const page = parseInt((_b = (_a = query === null || query === void 0 ? void 0 : query.page) === null || _a === void 0 ? void 0 : _a.toString()) !== null && _b !== void 0 ? _b : "1", 10);
                 const per_page = parseInt(((_c = query === null || query === void 0 ? void 0 : query.per_page) === null || _c === void 0 ? void 0 : _c.toString()) || config_1.config.PER_PAGE);
-                if (query === null || query === void 0 ? void 0 : query.search) {
+                if (!!(query === null || query === void 0 ? void 0 : query.search)) {
                     return dao_1.searchCards((_d = query === null || query === void 0 ? void 0 : query.search) === null || _d === void 0 ? void 0 : _d.toString(), page, per_page);
                 }
                 return dao_1.getCardsList(page, per_page);
