@@ -22,8 +22,16 @@ const Card = ({ title, description, imageUrl, icon, onClick }: CardProps) => {
       onClick={() => onClick(imageUrl)}
       border="none"
     >
-      <Image src={imageUrl} alt={title} width="sm" height={150} />
-      <Box className="card-image-icon">{icons[0]}</Box>
+      <Image
+        src={imageUrl}
+        alt={title}
+        width="sm"
+        height={150}
+        fallbackSrc="https://via.placeholder.com/150"
+      />
+      <Box className="card-image-icon">
+        {icons[Math.floor(Math.random() * 3)]}
+      </Box>
       <Box
         className="card-title"
         fontWeight="semibold"

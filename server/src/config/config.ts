@@ -9,6 +9,7 @@ interface ConfigInterface {
   UNSPLASH_SECRET: string;
   PEXELS_KEY: string;
   PER_PAGE: string;
+  ALLOW_ORIGIN: string[];
 }
 
 export const config: ConfigInterface = {
@@ -18,4 +19,7 @@ export const config: ConfigInterface = {
   UNSPLASH_SECRET: process.env.UNSPLASH_SECRET || "",
   PEXELS_KEY: process.env.PEXELS_KEY || "",
   PER_PAGE: process.env.PER_PAGE || "9",
+  ALLOW_ORIGIN: process.env.ALLOW_ORIGIN?.split(",")?.map((el) =>
+    el.trim()
+  ) || ["http://localhost:3000"],
 };

@@ -6,6 +6,7 @@ import {
 } from "./../../node_modules/pexels/dist/types.d";
 import { createClient } from "pexels";
 import { config } from "../config/config";
+import { logger } from "../helpers/logger";
 
 const pexelsClient = createClient(config.PEXELS_KEY);
 
@@ -32,6 +33,8 @@ export const getCardsList = async (page: number, per_page: number) => {
     page,
     per_page,
   });
+  logger.info("getCardsList " + page);
+
   return cleanResponse(photos);
 };
 
@@ -45,5 +48,6 @@ export const searchCards = async (
     page,
     per_page,
   });
+  logger.info("search " + query);
   return cleanResponse(search);
 };

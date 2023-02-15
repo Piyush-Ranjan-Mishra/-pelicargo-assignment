@@ -8,7 +8,7 @@ class UserRouter implements IRouter {
     router.get("/", async (req: Request, res: Response) => {
       try {
         const result = await userService.getCards(req);
-        return res.json(result);
+        return res.send(JSON.stringify(result));
       } catch (err) {
         throw err;
       }

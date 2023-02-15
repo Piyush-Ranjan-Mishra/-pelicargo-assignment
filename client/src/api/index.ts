@@ -1,72 +1,11 @@
-const callApi = (page: number, query: string | null) => ({
-  page: 1,
-  per_page: 9,
-  total_results: 8000,
-  photos: [
-    {
-      id: 15418150,
-      imageUrl:
-        "https://images.pexels.com/photos/15418150/pexels-photo-15418150.jpeg",
-      title: "Lisa Fotios",
-      description: "Free stock photo of earring, fashion, jewellery",
-    },
-    {
-      id: 13282876,
-      imageUrl:
-        "https://images.pexels.com/photos/13282876/pexels-photo-13282876.jpeg",
-      title: "Kássia Melo",
-      description: "Olhar.",
-    },
-    {
-      id: 13279267,
-      imageUrl:
-        "https://images.pexels.com/photos/13279267/pexels-photo-13279267.jpeg",
-      title: "Vladislav Nahorny",
-      description: "Woman in Grey Leather Jacket",
-    },
-    {
-      id: 15414190,
-      imageUrl:
-        "https://images.pexels.com/photos/15414190/pexels-photo-15414190.jpeg",
-      title: "Eugenia Remark",
-      description: "",
-    },
-    {
-      id: 15404859,
-      imageUrl:
-        "https://images.pexels.com/photos/15404859/pexels-photo-15404859.jpeg",
-      title: "Eugenia Remark",
-      description: "",
-    },
-    {
-      id: 15478809,
-      imageUrl:
-        "https://images.pexels.com/photos/15478809/pexels-photo-15478809.jpeg",
-      title: "Valeriia Miller",
-      description: "",
-    },
-    {
-      id: 15386483,
-      imageUrl:
-        "https://images.pexels.com/photos/15386483/pexels-photo-15386483.jpeg",
-      title: "stayhereforu",
-      description: "",
-    },
-    {
-      id: 15385051,
-      imageUrl:
-        "https://images.pexels.com/photos/15385051/pexels-photo-15385051.jpeg",
-      title: "Carlo Obrien",
-      description: "",
-    },
-    {
-      id: 15465414,
-      imageUrl:
-        "https://images.pexels.com/photos/15465414/pexels-photo-15465414.jpeg",
-      title: "The Earthy Jay",
-      description: "",
-    },
-  ],
-});
+const API_URL = process.env.REACT_APP_API_URL;
+
+const callApi = async (page: number, query: string | null) => {
+  const options = { page, query } as any;
+  const result = await fetch(
+    `${API_URL}/explore?` + new URLSearchParams(options)
+  );
+  return result.json();
+};
 
 export default callApi;

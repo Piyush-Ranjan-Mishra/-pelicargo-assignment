@@ -1,9 +1,7 @@
-{"level":"info","message":"Listening on port 3000 in development mode"}
+{"level":"info","message":"search null"}
 {"level":"info","message":"Listening on port 8000 in development mode"}
-{"level":"info","message":"Listening on port 8000 in development mode"}
-{"level":"error"}
-{"level":"info","message":"Listening on port 8000 in development mode"}
-{"level":"error"}
-{"level":"info","message":"Listening on port 8000 in development mode"}
-{"level":"info","message":"Listening on port 8000 in development mode"}
-{"level":"info","message":"Listening on port 8000 in development mode"}
+{"level":"info","message":"getCardsList 1"}
+{"level":"info","message":"getCardsList 1"}
+{"level":"info","message":"getCardsList 3"}
+{"level":"info","message":"getCardsList 5"}
+{"level":"info","message":"getCardsList 8"}
