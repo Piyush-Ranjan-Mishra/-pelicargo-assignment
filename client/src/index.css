@@ -1,0 +1,119 @@
+body {
+  margin-top: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.left {
+  display: flex;
+  padding-top: 30px;
+  min-width: 250px !important;
+  flex: 0 1;
+  flex-direction: column;
+  padding: 20px 0;
+  border-right: 1px #c9c9c9 solid;
+}
+
+.left .menu-items {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  border-radius: 4px;
+}
+
+.left .menu-items-bold {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.left .menu-items svg {
+  margin-right: 20px;
+}
+.left .menu-items-bold svg {
+  margin-right: 20px;
+}
+
+.center {
+  padding-top: 30px;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+
+
+.right button {
+  margin-right: 8px;
+  margin: 4px;
+}
+
+.searchbox-wrapper {
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.searchbox-wrapper input {
+  border-radius: 4px;
+  text-align: center;
+ 
+}
+
+.searchbox-wrapper input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.searchbox-left-icon {
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  border-radius: 4px;
+}
+.searchbox-right-icon {
+  display: flex;
+  padding: 4px 8px;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.card-layout-wrapper {
+  max-width: 840px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.card {
+  min-height: 200;
+  border-width: 1px;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.card img {
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.card .card-title {
+  margin-left: 8px;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+.card .card-description {
+  margin-left: 8px;
+  border-radius: 4px;
+}
