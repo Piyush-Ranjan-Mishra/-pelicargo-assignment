@@ -39,7 +39,7 @@ Front-end is in `client` folder.
 - material icons
 - tested
 
-|    Environment Variable     | Default Pagination count |
+|    Environment Variable     | Description |
 | :-------------------------: | :----------------------: |
 |    REACT_APP_PAGES_COUNT    | Default Pagination count |
 |      REACT_APP_API_URL      |        Url of api        |
@@ -79,13 +79,15 @@ Backend code is in `server` folder
 
   Url: `api/v1/explore`
 
-  |  params  |     description     |
+  |  Params  |     Description     | Type |
   | :------: | :-----------------: |
-  |  query   | Search Query params |
-  |   page   |   pagination page   |
-  | per_page |    list per page    |
+  |  query   | Search Query params | String |
+  |   page   |   pagination page   | Number |
+  | per_page |    list per page    | Number |
+  | token |    jwt token   | String |
+  
 
-| Environment Variable | Default Pagination count |
+| Environment Variable | Description |
 | :------------------: | :----------------------: |
 |       NODE_ENV       |     Node environment     |
 |         PORT         |       Server port        |
