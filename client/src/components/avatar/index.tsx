@@ -18,7 +18,13 @@ const AvatarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Stack justify={"start"} ml={1} mr={[2, 10]} direction={["row", "column"]}>
+    <Stack
+      justify={"start"}
+      ml={1}
+      mr={[2, 10]}
+      direction={["row", "column"]}
+      data-testid="avatar"
+    >
       <Avatar
         onClick={() => setIsOpen(true)}
         mr={1}

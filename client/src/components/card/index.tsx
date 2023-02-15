@@ -21,6 +21,7 @@ const Card = ({ title, description, imageUrl, icon, onClick }: CardProps) => {
       className="card"
       onClick={() => onClick(imageUrl)}
       border="none"
+      data-testid="card"
     >
       <Image
         src={imageUrl}

@@ -19,8 +19,8 @@ const LeftDrawer = ({ selected }: LeftDrawerProps) => {
   const bg = useColorModeValue("#f0eeee", "default");
 
   return (
-    <Flex className="left-container" gap="2" bg={bg}>
-      <Box>
+    <Flex className="left-container" gap="2" bg={bg} data-testid="menu">
+      <Box data-testid="menu">
         {Locale.menu.firstHalf.map((el: string) => (
           <MenuItem
             key={el}

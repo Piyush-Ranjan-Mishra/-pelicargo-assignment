@@ -25,7 +25,7 @@ const SearchBox = ({ setQuery }: SearchBoxProps) => {
   const iconBG = useColorModeValue("white", "gray.900");
 
   return (
-    <Box display={"flex"} justifyContent="center">
+    <Box display={"flex"} justifyContent="center" data-testid='search-box'>
       <InputGroup
         className="searchbox-wrapper"
         bg={bg}
