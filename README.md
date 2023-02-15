@@ -16,7 +16,7 @@ This is full stack assignment to build FE and BE based on this [UI](https://drib
 ![Web Dark mode](./screenshots/dark-mobile.png?raw=true)
 
 # Front-end
-
+(Url)[https://bespoke-blancmange-8677a2.netlify.app]
 Front-end is in `client` folder.
 
 ## ToolStack
@@ -57,7 +57,7 @@ Front-end is in `client` folder.
 - Color might be different
 
 # Back-end
-
+(Url)[https://pelicargo-test.onrender.com/]
 Backend code is in `server` folder
 
 ## ToolStack
