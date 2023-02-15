@@ -11,11 +11,17 @@ import { useState } from "react";
 import Card, { CardProps } from "../card";
 import ModalComponent from "../modal";
 
-export type CardLayoutProps = {
+export type DataProps = {
   photos: CardProps[];
   currentPage: number;
   per_page: number;
   total_result: number;
+  pagesCount: number;
+  pages: number[];
+  onPageChange: (page: number) => void;
+};
+
+type CardLayoutProps = {
   pagesCount: number;
   pages: number[];
   onPageChange: (page: number) => void;
@@ -27,7 +33,7 @@ const CardLayout = ({
   pagesCount,
   pages,
   onPageChange,
-}: CardLayoutProps) => {
+}: CardLayoutProps & DataProps) => {
   const [imageClick, setImageClick] = useState<string | null>(null);
   return (
     <Box className="card-layout-wrapper">
@@ -46,7 +52,7 @@ const CardLayout = ({
         currentPage={currentPage}
         onPageChange={onPageChange}
       >
-        <PaginationContainer justifyContent={"center"} >
+        <PaginationContainer justifyContent={"center"}>
           <PaginationPrevious>Previous</PaginationPrevious>
           <PaginationPageGroup>
             {pages.map((page: number) => (

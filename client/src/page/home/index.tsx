@@ -3,14 +3,14 @@ import { Box, Spacer } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import callApi from "../../api";
 import AvatarComponent from "../../components/avatar";
-import CardLayout from "../../components/cardLayout";
+import CardLayout, { DataProps } from "../../components/cardLayout";
 import LeftDrawer from "../../components/leftDrawer";
 import SearchBox from "../../components/searchbox";
 import Locale from "../../utils/locale";
 import debounce from "lodash.debounce";
 
 const Home = () => {
-  const [data, setData] = useState<any>([]);
+  const [data, setData] = useState<DataProps | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [query, setQuery] = useState<string | null>(null);
   const { currentPage, setCurrentPage, pagesCount, pages } = usePagination({
