@@ -27,7 +27,10 @@ const Card = ({ title, description, imageUrl, icon, onClick }: CardProps) => {
         alt={title}
         width="sm"
         height={150}
-        fallbackSrc="https://via.placeholder.com/150"
+        fallbackSrc={
+          process.env.REACT_APP_IMAGE_PLACEHOLDER ||
+          "https://via.placeholder.com/150"
+        }
       />
       <Box className="card-image-icon">
         {icons[Math.floor(Math.random() * 3)]}
