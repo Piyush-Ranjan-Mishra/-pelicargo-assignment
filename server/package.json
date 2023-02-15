@@ -17,7 +17,8 @@
     "jsonwebtoken": "^9.0.0",
     "mysql": "^2.18.1",
     "node-pexels": "^2.0.1",
-    "pexels": "^1.4.0"
+    "pexels": "^1.4.0",
+    "winston": "^3.8.2"
   },
   "devDependencies": {
     "@ava/typescript": "^2.0.0",
