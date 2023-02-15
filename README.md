@@ -80,7 +80,7 @@ Backend code is in `server` folder
   Url: `api/v1/explore`
 
   |  Params  |     Description     | Type |
-  | :------: | :-----------------: |
+  | :------: | :-----------------: |:-----------------:|
   |  query   | Search Query params | String |
   |   page   |   pagination page   | Number |
   | per_page |    list per page    | Number |
