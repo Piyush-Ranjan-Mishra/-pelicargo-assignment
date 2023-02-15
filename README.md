@@ -6,14 +6,14 @@ This is full stack assignment to build FE and BE based on this [UI](https://drib
 
 #### Web
 
-[Web Light mode](./screenshots/light-web.png?raw=true)
-[Web Dark mode](./screenshots/dark-web.png?raw=true)
-[Pagination](./screenshots/light-web-pagination.png)
+![Web Light mode](./screenshots/light-web.png?raw=true)
+![Web Dark mode](./screenshots/dark-web.png?raw=true)
+![Pagination](./screenshots/light-web-pagination.png)
 
 #### Mobile
 
-[Mobile Light mode](./screenshots/light-mobile.png?raw=true)
-[Web Dark mode](./screenshots/dark-mobile.png?raw=true)
+![Mobile Light mode](./screenshots/light-mobile.png?raw=true)
+![Web Dark mode](./screenshots/dark-mobile.png?raw=true)
 
 # Front-end
 
