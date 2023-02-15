@@ -33,7 +33,7 @@ export const getCardsList = async (page: number, per_page: number) => {
     page,
     per_page,
   });
-  logger.info("getCardsList " + page);
+  logger.info(`getCardsList ${page}`);
 
   return cleanResponse(photos);
 };

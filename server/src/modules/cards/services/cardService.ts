@@ -15,8 +15,7 @@ class CardService implements ICardService {
       }
       return getCardsList(page, per_page);
     } catch (error) {
-      console.error({ error });
-      logger.error(error);
+      logger.error({error});
       return error;
     }
   }
