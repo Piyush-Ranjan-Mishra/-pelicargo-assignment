@@ -42,6 +42,7 @@ Front-end is in `client` folder.
 |    REACT_APP_PAGES_COUNT    | Default Pagination count |
 |      REACT_APP_API_URL      |        Url of api        |
 | REACT_APP_IMAGE_PLACEHOLDER |    Placeholder image     |
+|     REACT_APP_TOKEN_KEY     |    API JWT token key     |
 
 #### Getting started
 
@@ -64,6 +65,7 @@ Backend code is in `server` folder
 - Node
 - Typescript
 - Express
+- JWT Authentication
 - Winston (logging)
 - ava(testing)
 
@@ -86,6 +88,7 @@ Backend code is in `server` folder
 |      PEXELS_KEY      |      Pexels api key      |
 |       PER_PAGE       |     Default per page     |
 |     ALLOW_ORIGIN     |       Cors origin        |
+|      TOKEN_KEY       |         JWT Key          |
 
 #### Getting started
 
