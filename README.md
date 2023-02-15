@@ -37,7 +37,7 @@ Front-end is in `client` folder.
 - Images have placeholders while image loading. You can also update placeholder by adding env variable REACT_APP_IMAGE_PLACEHOLDER
 - Shows menu drawer on mobile
 - material icons
-- tested
+- tested by jest
 
 |    Environment Variable     | Description |
 | :-------------------------: | :----------------------: |
