@@ -18,23 +18,19 @@ const AvatarComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Stack
-      justify={"start"}
-      ml={1}
-      mr={[2, 10]}
-      direction={["row", "column"]}
-      data-testid="avatar"
-    >
+    <Stack justify={"start"} ml={1} mr={[2, 10]} direction={["row", "column"]}>
       <Avatar
         onClick={() => setIsOpen(true)}
         mr={1}
         name="Piyush Mishra"
         src="https://bit.ly/mishhy"
+        data-testid="avatar"
       />
       <IconButton
         onClick={toggleColorMode}
         mr={1}
         minW={10}
+        data-testid="dark-mode-button"
         aria-label="Dark mode"
       >
         {colorMode === "light" ? (

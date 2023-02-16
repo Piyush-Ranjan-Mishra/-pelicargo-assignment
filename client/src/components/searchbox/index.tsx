@@ -25,7 +25,7 @@ const SearchBox = ({ setQuery }: SearchBoxProps) => {
   const iconBG = useColorModeValue("white", "gray.900");
 
   return (
-    <Box display={"flex"} justifyContent="center" data-testid='search-box'>
+    <Box display={"flex"} justifyContent="center" data-testid="search-box">
       <InputGroup
         className="searchbox-wrapper"
         bg={bg}
@@ -36,6 +36,7 @@ const SearchBox = ({ setQuery }: SearchBoxProps) => {
           bg={iconBG}
           borderRadius={4}
           px={0}
+          data-testid="filter"
           children={
             <Box className="searchbox-left-icon" bg={iconBG}>
               <TuneIcon />
@@ -58,6 +59,7 @@ const SearchBox = ({ setQuery }: SearchBoxProps) => {
           bg={iconBG}
           borderRadius={4}
           px={0}
+          data-testid="info"
           display={["none", "flex"]}
           children={
             <Box className="searchbox-right-icon" bg={iconBG}>

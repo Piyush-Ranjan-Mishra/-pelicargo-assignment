@@ -51,6 +51,7 @@ const CardLayout = ({
         pagesCount={pagesCount}
         currentPage={currentPage}
         onPageChange={onPageChange}
+        data-testid='pagination'
       >
         <PaginationContainer justifyContent={"center"}>
           <PaginationPrevious>Previous</PaginationPrevious>
