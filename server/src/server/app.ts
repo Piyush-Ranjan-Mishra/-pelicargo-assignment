@@ -1,10 +1,8 @@
-import jwt from "jsonwebtoken";
-import { CorsOption, verifyToken } from "./../middleware";
+import { CorsOption, verifyToken } from "../middleware";
 import express from "express";
 import cors from "cors";
 import { ServerInterface } from "./app.interface";
 import baseRouter from "../modules/baseRouter";
-import { logger } from "../helpers/logger";
 
 class Server implements ServerInterface {
   async server(): Promise<express.Application> {

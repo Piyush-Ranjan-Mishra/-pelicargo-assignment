@@ -21,7 +21,8 @@ const cleanResponse = (
     total_results,
     photos: photos.map((el: Photo) => ({
       id: el.id,
-      imageUrl: el.src.original,
+      imageUrl: el.src.landscape,
+      original: el.src,
       title: el.photographer,
       description: el.alt,
     })),

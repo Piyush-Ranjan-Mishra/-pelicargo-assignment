@@ -8,18 +8,26 @@ export type CardProps = {
   title: string;
   description: string;
   imageUrl: string;
+  original: any;
   icon: string;
   onClick: (url: string | null) => void;
 };
 
 const icons = [<LanguageIcon />, <WebAssetIcon />, <DashboardIcon />];
 
-const Card = ({ title, description, imageUrl, icon, onClick }: CardProps) => {
+const Card = ({
+  title,
+  description,
+  imageUrl,
+  original,
+  icon,
+  onClick,
+}: CardProps) => {
   return (
     <Box
       maxW="sm"
       className="card"
-      onClick={() => onClick(imageUrl)}
+      onClick={() => onClick(original.original || imageUrl)}
       border="none"
       data-testid="card"
     >
