@@ -1,7 +1,7 @@
 const Locale = {
   title: "Curated",
   searchBox: {
-    filter: "Filer",
+    filter: "Filter",
     placeholder: "Search Knowledge",
   },
   menu: {
