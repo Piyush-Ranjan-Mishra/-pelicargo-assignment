@@ -8,7 +8,7 @@ export type CardProps = {
   title: string;
   description: string;
   imageUrl: string;
-  original: any;
+  original?: any;
   icon: string;
   onClick: (url: string | null) => void;
 };
@@ -19,7 +19,7 @@ const Card = ({
   title,
   description,
   imageUrl,
-  original,
+  original: originalSrc,
   icon,
   onClick,
 }: CardProps) => {
@@ -27,7 +27,7 @@ const Card = ({
     <Box
       maxW="sm"
       className="card"
-      onClick={() => onClick(original.original || imageUrl)}
+      onClick={() => onClick(originalSrc?.original || imageUrl)}
       border="none"
       data-testid="card"
     >
