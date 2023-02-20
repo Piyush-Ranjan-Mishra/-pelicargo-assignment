@@ -1,5 +1,5 @@
 import { usePagination } from "@ajna/pagination";
-import { Box, Spacer } from "@chakra-ui/react";
+import { Box, Spacer, Spinner } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import callApi from "../../api";
 import AvatarComponent from "../../components/avatar";
@@ -33,6 +33,17 @@ const Home = () => {
       <Spacer className="center-container">
         <Box maxW={1280}>
           <SearchBox setQuery={setQuery} />
+          {!data && (
+            <Box className="center-container" m={"20px auto !important"}>
+              <Spinner
+                thickness="4px"
+                speed="0.65s"
+                emptyColor="gray.200"
+                color="gray.500"
+                size="xl"
+              />
+            </Box>
+          )}
           {error && "Unknown error happen"}
           {!error && !!data && (
             <CardLayout
